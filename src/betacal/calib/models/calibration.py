@@ -12,13 +12,11 @@ from sklearn.utils import check_X_y, check_array, indexable, column_or_1d
 from sklearn.utils.validation import check_is_fitted
 
 # from sklearn.utils.fixes import signature
-from funcsigs import signature  # added by @satyaborg
+from funcsigs import signature
 from sklearn.isotonic import IsotonicRegression
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import LinearSVC
 from sklearn.model_selection import check_cv
-
-# from sklearn.metrics._classification import _check_binary_probabilistic_predictions # modified by @satyaborg
 
 
 from betacal import BetaCalibration
