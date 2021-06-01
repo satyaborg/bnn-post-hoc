@@ -1,0 +1,86 @@
+{
+    "abalone": {
+        "vb_epochs": 3000,
+        "nn_epochs": 1500
+    },
+    "landsat-satellite": {
+        "vb_epochs": 200,
+        "nn_epochs": 200
+    },
+    "mfeat-zernike": {
+        "vb_epochs": 5000,
+        "nn_epochs": 1500
+    },
+    "wpbc": {
+        "vb_epochs": 3000,
+        "nn_epochs": 1500
+    },
+    "yeast": {
+        "vb_epochs": 3000,
+        "nn_epochs": 1500
+    },
+    "vehicle": {
+        "vb_epochs": 3000,
+        "nn_epochs": 1500
+    },
+    "toy": {
+        "vb_epochs": 3000,
+        "nn_epochs": 1500
+    },
+    "mushroom": {
+        "vb_epochs": 1000,
+        "nn_epochs": 2000
+    },
+    "mfeat-morphological": {
+        "vb_epochs": 5000,
+        "nn_epochs": 1500
+    },
+    "ionosphere": {
+        "vb_epochs": 5000,
+        "nn_epochs": 1500
+    },
+    "german": {
+        "vb_epochs": 1000,
+        "nn_epochs": 100
+    },
+    "page-blocks": {
+        "vb_epochs": 5000,
+        "nn_epochs": 1500
+    },
+    "spambase": {
+        "vb_epochs": 3000,
+        "nn_epochs": 1500
+    },
+    "credit-approval": {
+        "vb_epochs": 3000,
+        "nn_epochs": 1500
+    },
+    "segment": {
+        "vb_epochs": 1500,
+        "nn_epochs": 3000
+    },
+    "waveform-5000": {
+        "vb_epochs": 3000,
+        "nn_epochs": 1500
+    },
+    "wdbc": {
+        "vb_epochs": 3000,
+        "nn_epochs": 1500
+    },
+    "balance-scale": {
+        "vb_epochs": 3000,
+        "nn_epochs": 1500
+    },
+    "mfeat-karhunen": {
+        "vb_epochs": 3000,
+        "nn_epochs": 1500
+    },
+    "letter": {
+        "vb_epochs": 1000,
+        "nn_epochs": 500
+    },
+    "optdigits": {
+        "vb_epochs": 5000,
+        "nn_epochs": 1500
+    }
+}

@@ -1,0 +1,41 @@
+# general
+project: Probabilistic Neural Network Versus Ex-Post Calibration For Capturing Prediction Uncertainty
+log_level: INFO
+debug: 0
+verbose: 1
+
+# filepaths
+paths:
+  root: vb_calibration_nn
+  data: data
+  checkpoint: checkpoints
+  logs: logs
+  results: results
+
+# global vars
+seed: 42
+workers: 4
+device: cuda
+model_arch: feedforward
+hidden_layers: [4, 4]
+monitor_loss: True
+transf: YJ # transformation/defining the type of approximation
+p: 5 # number of factors in covariance matrix
+batch_size: 64
+randomize_minibatch: True # randomize minibatch for each iteration
+valid_pct: 0.2 # test split percentage
+num_workers: 4
+
+prior: uniform
+optimizer: ADAM # options: ADAM, ADADELTA
+
+# ADADELTA hyperparameters
+epsilon: 0.0000001
+rho: 0.95
+
+# ADAM hyperparameters
+vb_lr: 0.001 # learning rate for VB
+nn_lr: 0.001 # learning rate for NN
+beta_1: 0.9
+beta_2: 0.999
+
