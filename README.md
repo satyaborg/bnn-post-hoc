@@ -50,4 +50,4 @@ pip install -r requirements.txt
 - Datasets were downloaded and preprocessed using the following [code](https://github.com/REFRAME/betacal/blob/master/aistats2017/experiments/data_wrappers/datasets.py) as per previous [work](http://proceedings.mlr.press/v54/kull17a.html).
 
 ## License
-MIT
+GNU General Public License v3.0
