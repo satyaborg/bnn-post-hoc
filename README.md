@@ -14,9 +14,9 @@ The core files are as follows:
 - `dataset.py`: TF dataset builder.
 - `utils.py`: General utility functions for plotting, exporting arrays etc.
 - `vbutils`: Contains utility functions related to VB.
-- `betacal`: Contains calibration methods (Beta, Logistic and Isotonic). Code adapted from [here](https://github.com/betacal/aistats2017/tree/master/experiments).
+- `betacal`: Contains calibration methods (Beta, Logistic and Isotonic). Code adapted from [here](https://github.com/betacal/aistats2017/tree/master/experiments) [1].
 
-All results and logs can be access under `results/` and `logs/` folders (both are automatically created).
+All results and logs can be access under `results/` and `logs/` folders (both are automatically created). Datasets (found under `data/`) were downloaded and preprocessed using the following [code](https://github.com/REFRAME/betacal/blob/master/aistats2017/experiments/data_wrappers/datasets.py) as per previous [work](http://proceedings.mlr.press/v54/kull17a.html) on calibration methods [1].
 
 ## Setup
 > Note: Python version == 3.6
@@ -41,13 +41,18 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-3. Execute `run_experiments.sh` by providing the path to activate the virtual environment:
+3. Execute `run_experiments.sh` with an optional path to activate the virtual environment as an argument (not required if virtualenv is already activated):
+
+```
+./run_experiments.sh
+```
+or
 ```
 ./run_experiments.sh venv/bin/activate
 ```
 
 ## References
-- Datasets were downloaded and preprocessed using the following [code](https://github.com/REFRAME/betacal/blob/master/aistats2017/experiments/data_wrappers/datasets.py) as per previous [work](http://proceedings.mlr.press/v54/kull17a.html).
+[1] [Kull, M., Filho, T.S. & Flach, P.. (2017). Beta calibration: a well-founded and easily implemented improvement on logistic calibration for binary classifiers. Proceedings of the 20th International Conference on Artificial Intelligence and Statistics, in PMLR 54:623-631.](http://proceedings.mlr.press/v54/kull17a.html)
 
 ## License
 GNU General Public License v3.0

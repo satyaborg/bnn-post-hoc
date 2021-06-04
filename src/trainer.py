@@ -249,10 +249,10 @@ class Trainer(object):
             # plot ELBO every 10 epochs
             if (epoch + 1) % 10 == 0:
                 fig = plot_metrics(elbo=StoreLB, trace=temp)
-                fig.savefig(f"{fpath}/{name}_{run}_{self.mode}_elbo_plot.pdf")
+                fig.savefig(f"{fpath}/{name}_{self.mode}_elbo_plot.pdf")
                 if self.monitor_loss and self.mode == "validation":
                     fig = plot_vb_loss(loss=train_log_loss, val_loss=val_log_loss)
-                    fig.savefig(f"{fpath}/{name}_{run}_{self.mode}_vb_loss.pdf")
+                    fig.savefig(f"{fpath}/{name}_{self.mode}_vb_loss.pdf")
 
         # training ended ######################################################
         # mean across last n_epochs
@@ -564,12 +564,12 @@ class Trainer(object):
             self.set_model_weights(theta=theta_mean)
 
     # @profile
-    def fit(self, train, valid_set, n_samples, name, run):
+    def fit(self, train, valid_set, n_samples, name, path):
         """Main training function"""
         # enable/disable eager execution
         tf.config.run_functions_eagerly(self.debug)  # in order to debug tf.function
         # create result folder
-        path = f"{self.paths.get('results')}/{self.filename}"
+        # path = f"{self.paths.get('results')}/{self.filename}"
         self.model = custom_feedforward(
             in_dim=self.in_dim, hidden_layers=self.hidden_layers
         )

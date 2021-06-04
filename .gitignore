@@ -132,3 +132,5 @@ dmypy.json
 .ipynb_checkpoints
 __pycache__
 __pypackages__
+logs
+results
