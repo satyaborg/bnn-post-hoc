@@ -1,9 +1,9 @@
 from src.models import custom_feedforward
 from src.utils import set_model_weights
-from keras.losses import BinaryCrossentropy
-from keras.layers import Activation
-from keras.optimizers import Adadelta, Adam
-from keras.wrappers.scikit_learn import KerasClassifier
+from tensorflow.keras.losses import BinaryCrossentropy
+from tensorflow.keras.layers import Activation
+from tensorflow.keras.optimizers import Adadelta, Adam
+from tensorflow.keras.wrappers.scikit_learn import KerasClassifier
 
 
 class Net(object):

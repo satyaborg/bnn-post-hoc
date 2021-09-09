@@ -11,6 +11,8 @@ from time import strftime
 import logging
 from sklearn.model_selection import train_test_split
 
+import argparse
+
 # custom classes and modules
 from src import config
 from src.dataset import Dataset
@@ -111,13 +113,24 @@ def train(name, data_home, **kwargs):
 
 if __name__ == "__main__":
     # ensure that dataset name is provided
+    parser = argparse.ArgumentParser(description="Parameters for the training run")
+    parser.add_argument("--dataset_name", required=True, type=str, help="The dataset to train on")
+    parser.add_argument("--run_idx", required=True, type=int, help="Run index")
+    parser.add_argument("--seed", required=True, type=int, help="Random seed")
+
+    args, unknown = parser.parse_known_args()
+
+    dataset_name = args.dataset_name
+    seed = args.seed
+
     if len(sys.argv) < 3:
         logger.info("Please provide name of the dataset ..")
         sys.exit(0)
 
     # arguments
-    config["seed"] = int(sys.argv[1])
-    name = sys.argv[2]
+    config["seed"] = seed
+    name = dataset_name
+    
     logger.info(f"Dataset: {name}")
     set_rand_seed(config.get("seed"))  # setting random seeds
     start_time = time.time()

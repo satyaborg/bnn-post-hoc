@@ -18,9 +18,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.svm import LinearSVC
 from sklearn.model_selection import check_cv
 
-
 from betacal import BetaCalibration
-
 
 class CalibratedClassifierCV(BaseEstimator, ClassifierMixin):
     """Probability calibration with isotonic regression, sigmoid or beta.
