@@ -1,5 +1,4 @@
-# VB & Calibrated Neural Nets
-Repository containing code and experiments for the paper "**Probabilistic Neural Network Versus Ex-Post Calibration For Capturing Prediction Uncertainty**".
+Repository containing code and experiments for the paper "**Bayesian Neural Network Versus Ex-Post Calibration For Capturing Prediction Uncertainty**".
 
 ![alt text](/vb_example.png)
 
